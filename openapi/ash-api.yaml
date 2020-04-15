@@ -29,3 +29,16 @@ paths:
           required: true
           schema:
             type: string
+  "/packages/{name}":
+    get:
+      responses:
+        "200":
+          description: "Returns top 25 most similar python packages to {name}"
+        "404":
+          description: "{name} is not not found"
+      parameters:
+        - name: name
+          in: path
+          required: true
+          schema:
+            type: string
